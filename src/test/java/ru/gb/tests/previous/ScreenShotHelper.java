@@ -1,4 +1,4 @@
-package ru.gb;
+package ru.gb.tests.previous;
 
 
 import io.appium.java_client.MobileBy;

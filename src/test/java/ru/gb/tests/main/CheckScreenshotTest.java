@@ -1,4 +1,4 @@
-package ru.gb.tests;
+package ru.gb.tests.main;
 
 import io.qameta.allure.Description;
 import org.testng.annotations.Listeners;
@@ -7,13 +7,13 @@ import ru.gb.base.BaseTest;
 import ru.gb.listeners.AllureListener;
 
 @Listeners(AllureListener.class)
-public class ScreenShotTest extends BaseTest {
+public class CheckScreenshotTest extends BaseTest {
 
     @Test
-   @Description("Проверяем UI главной страницы с помощью скриншота.")
-
-    public void checkMainPageScreen(){
+    @Description("Проверяем UI главной страницы с помощью скриншота.")
+    public void CheckMainPageScreenshot() {
         openApp()
                 .checkScreenshot();
     }
 }
+
