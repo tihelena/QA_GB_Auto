@@ -1,4 +1,4 @@
-package ru.gb;
+package ru.gb.tests;
 
 
 import io.appium.java_client.MobileDriver;
@@ -24,7 +24,7 @@ public class MySecondTest {
         capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("automationName", "UiAutomator2");
 
-        capabilities.setCapability("app", "C:\\Users\\NUC J3455\\Downloads\\Android-NativeDemoApp-0.2.1.apk");
+        capabilities.setCapability("app", "/Users/elenatihonova/Downloads/Android-NativeDemoApp-0.2.1.apk");
         MobileDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
         //tap forms
