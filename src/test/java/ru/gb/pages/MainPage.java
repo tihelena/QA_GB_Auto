@@ -26,6 +26,12 @@ public class MainPage {
         return new LoginPage();
     }
 
+    @Step("Кликаем по кнопке формы в меню и переходим на новую страницу формы")
+    public FormsPage clickFormsMenuButton() {
+        $(locator().formsButton()).click();
+        return new FormsPage();
+    }
+
     @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
     public MainPage checkScreenshot() {
         // Загружаем ожидаемое изображения для сравнения.

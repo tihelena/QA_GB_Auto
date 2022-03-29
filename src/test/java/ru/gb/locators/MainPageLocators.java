@@ -10,6 +10,10 @@ public class MainPageLocators {
         return MobileBy.AccessibilityId("Login");
     }
 
+    public By formsButton() {
+        return MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Forms\"]/android.widget.TextView");
+    }
+
     public By homeScreen() {
         return MobileBy.AccessibilityId("Home-screen");
     }
