@@ -27,6 +27,18 @@ public class MainPage {
         return new LoginPage();
     }
 
+    @Step("Кликаем по кнопке формы в меню и переходим на новую страницу формы")
+    public FormsPage clickFormsMenuButton() {
+        $(locator().formsButton()).click();
+        return new FormsPage();
+    }
+
+    @Step("Кликаем по кнопке свайп в меню и переходим на новую страницу свайпа")
+    public SwipePage clickSwipeMenuButton() {
+        $(locator().swipeButton()).click();
+        return new SwipePage();
+    }
+
     @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
     public MainPage checkScreenshot() {
         // Загружаем ожидаемое изображения для сравнения.

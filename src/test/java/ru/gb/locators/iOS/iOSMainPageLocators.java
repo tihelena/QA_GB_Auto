@@ -10,7 +10,17 @@ public class iOSMainPageLocators implements MainPageLocators {
         return MobileBy.AccessibilityId("Login");
     }
 
+    @Override
+    public By formsButton() {
+        return null;
+    }
+
     public By homeScreen() {
         return MobileBy.AccessibilityId("Home-screen");
+    }
+
+    @Override
+    public By swipeButton() {
+        return null;
     }
 }
