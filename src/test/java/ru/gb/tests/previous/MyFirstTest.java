@@ -1,14 +1,24 @@
 package ru.gb.tests.previous;
 
+import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.IAttributes;
 import org.testng.annotations.Test;
 import ru.gb.base.BaseTest;
 
 import java.net.URL;
+
+import static com.codeborne.selenide.CollectionCondition.size;
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Selectors.byAttribute;
+import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class MyFirstTest extends BaseTest {
 
@@ -47,10 +57,16 @@ public class MyFirstTest extends BaseTest {
     }
 
 */
-        openApp()
-                .clickLoginMenuButton()
-                .clickLoginButton()
-                .checkLoginErrorText("Please enter a valid email address");
+//        openApp()
+//                .clickLoginMenuButton()
+//                .clickLoginButton()
+//                .checkLoginErrorText("Please enter a valid email address");
+        openApp();
+
+        Selenide.$x("//android.view.ViewGroup[@content-desc=\"Swipe\"]/android.view.ViewGroup/android.widget.TextView").click();
+        Selenide.$x("//android.view.ViewGroup[@content-desc=\"Carousel\"]");
+       //Selenide.$$(".android.view.ViewGroup").shouldHave(size(7));
+
 
     }
 
