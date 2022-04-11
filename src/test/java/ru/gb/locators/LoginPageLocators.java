@@ -9,6 +9,14 @@ public class LoginPageLocators {
         return MobileBy.AccessibilityId("button-LOGIN");
     }
 
+    public By inputEmail() {
+        return MobileBy.AccessibilityId("input-email");
+    }
+
+    public By inputPassword() {
+        return MobileBy.AccessibilityId("input-password");
+    }
+
     public By loginErrorText() {
         return MobileBy.xpath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup" +
                 "/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[1]");
