@@ -12,6 +12,30 @@ public class LoginPage {
         return new LoginPageLocators();
     }
 
+    @Step("Кликаем по полю 'email'")
+    public LoginPage clickEmailInput() {
+        Selenide.$(locator().inputEmail()).click();
+        return new LoginPage();
+    }
+
+    @Step("Вводим текст в поле 'email'")
+    public LoginPage inputEmail(String email) {
+        Selenide.$(locator().inputEmail()).sendKeys(email);
+        return new LoginPage();
+    }
+
+    @Step("Кликаем по полю 'password'")
+    public LoginPage clickPasswordInput() {
+       Selenide.$(locator().inputPassword()).click();
+        return new LoginPage();
+    }
+
+    @Step("Вводим текст в поле 'password'")
+    public LoginPage inputPassword(String password) {
+        Selenide.$(locator().inputPassword()).sendKeys(password);
+        return new LoginPage();
+    }
+
     @Step("Кликаем по кнопке 'логин' в форме")
     public LoginPage clickLoginButton() {
         Selenide.$(locator().loginButton()).click();
